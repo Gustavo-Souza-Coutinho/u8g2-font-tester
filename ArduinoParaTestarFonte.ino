@@ -1,5 +1,5 @@
 #include <Adafruit_ILI9341.h>
-#include "U8g2_for_Adafruit_GFX.h"  // Inclui a biblioteca U8g2 para Adafruit GFX
+#include "U8g2_for_Adafruit_GFX.h" 
 
 // Definições dos pinos SPI
 #define TFT_DC 7   // PA8
