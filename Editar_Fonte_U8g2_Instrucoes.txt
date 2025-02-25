@@ -1,0 +1,44 @@
+
+Instruções para Editar e Converter Fontes no U8g2
+
+Pré-requisitos:
+- Certifique-se de ter o software Fony instalado para editar arquivos de fontes BDF.
+- O U8g2-master e a pasta de fontes (como \EditarFontes) devem estar corretamente configurados no seu sistema.
+
+Passo 1: Localização do Arquivo de Fonte
+1. Navegue até a pasta onde as fontes estão armazenadas dentro do diretório u8g2-master. O caminho é:
+    \EditarFontes\u8g2-master\tools\font\bdf.
+2. Encontre o arquivo BDF correspondente à fonte que deseja editar.
+
+Passo 2: Edição da Fonte
+1. Abra o arquivo BDF selecionado utilizando o software Fony.
+2. Realize as modificações desejadas na fonte (alterações de caracteres, estilo, espaçamento, etc.).
+3. Após editar, salve o arquivo BDF com as alterações realizadas.
+
+Passo 3: Exportação do Arquivo BDF
+1. Exporte a fonte editada como um novo arquivo BDF para a pasta \EditarFontes.
+    - Certifique-se de manter a convenção de nomenclatura para garantir consistência.
+
+Passo 4: Preparação para Conversão
+1. Abra o Prompt de Comando (CMD) na pasta \EditarFontes.
+    - Para fazer isso rapidamente, clique na barra de endereço da pasta no Explorer e digite cmd. Em seguida, pressione Enter.
+
+Passo 5: Conversão da Fonte
+1. No Prompt de Comando, execute o seguinte comando para converter o arquivo BDF para o formato .c:
+
+    ./bdfconv -v -f 1 -m "32-126" -o MUDARAQUIPARASUAFONTE.c MUDARAQUIPARASUAFONTE.bdf
+
+    - Parâmetros:
+        - -v: Ativa o modo verbose, exibindo mais detalhes durante a execução.
+        - -f 1: Define a fonte para o formato desejado.
+        - -m "32-126": Especifica o intervalo de caracteres (de 32 a 126, correspondendo aos caracteres ASCII imprimíveis).
+        - -o MUDARAQUIPARASUAFONTE.c: Define o nome do arquivo de saída.
+        - MUDARAQUIPARASUAFONTE.bdf: Nome do arquivo BDF que será convertido.
+2. O arquivo convertido será gerado com o nome especificado (MUDARAQUIPARASUAFONTE.c) na pasta \EditarFontes.
+
+Passo 6: Substituição da Fonte Antiga
+1. Para atualizar sua aplicação, substitua a fonte antiga pela nova gerada.
+2. Certifique-se de que a nova fonte está corretamente integrada no código, com todos os ajustes necessários para garantir que a fonte funcione conforme esperado.
+
+Conclusão
+Após a execução desses passos, a nova fonte estará pronta para uso no seu projeto. Certifique-se de testar a renderização da fonte para garantir que todas as modificações sejam aplicadas corretamente.
