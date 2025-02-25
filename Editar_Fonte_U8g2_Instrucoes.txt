@@ -1,4 +1,4 @@
-Passo a Passo para Editar uma Fonte no Projeto U8G2
+Passo a Passo para Editar uma Fonte U8G2
 
 1. Localize o Arquivo da Fonte Original
    - Navegue até o diretório u8g2-master\tools\font\bdf.
